@@ -1,0 +1,17 @@
+C:\Users\admin\source\repos\UnionDeTablas\UnionDeTablas\bin\Debug\UnionDeTablas.exe.config
+C:\Users\admin\source\repos\UnionDeTablas\UnionDeTablas\bin\Debug\UnionDeTablas.exe
+C:\Users\admin\source\repos\UnionDeTablas\UnionDeTablas\bin\Debug\UnionDeTablas.pdb
+C:\Users\admin\source\repos\UnionDeTablas\UnionDeTablas\obj\Debug\UnionDeTablas.csprojAssemblyReference.cache
+C:\Users\admin\source\repos\UnionDeTablas\UnionDeTablas\obj\Debug\UnionDeTablas.LOGUIN.resources
+C:\Users\admin\source\repos\UnionDeTablas\UnionDeTablas\obj\Debug\UnionDeTablas.Properties.Resources.resources
+C:\Users\admin\source\repos\UnionDeTablas\UnionDeTablas\obj\Debug\UnionDeTablas.csproj.GenerateResource.cache
+C:\Users\admin\source\repos\UnionDeTablas\UnionDeTablas\obj\Debug\UnionDeTablas.exe
+C:\Users\admin\source\repos\UnionDeTablas\UnionDeTablas\obj\Debug\UnionDeTablas.pdb
+C:\Users\admin\source\repos\UnionDeTablas\UnionDeTablas\obj\Debug\UnionDeTablas.Vistas.Menu.resources
+C:\Users\admin\source\repos\UnionDeTablas\UnionDeTablas\obj\Debug\UnionDeTablas.Vistas.ROLES.resources
+C:\Users\admin\source\repos\UnionDeTablas\UnionDeTablas\obj\Debug\UnionDeTablas.Vistas.Usuarios.resources
+C:\Users\admin\source\repos\UnionDeTablas\UnionDeTablas\bin\Debug\EntityFramework.dll
+C:\Users\admin\source\repos\UnionDeTablas\UnionDeTablas\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\admin\source\repos\UnionDeTablas\UnionDeTablas\bin\Debug\EntityFramework.xml
+C:\Users\admin\source\repos\UnionDeTablas\UnionDeTablas\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\admin\source\repos\UnionDeTablas\UnionDeTablas\obj\Debug\UnionDeTablas.csproj.CopyComplete

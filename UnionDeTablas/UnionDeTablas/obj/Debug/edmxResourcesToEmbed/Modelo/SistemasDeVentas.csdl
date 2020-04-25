@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SistemaDeVentasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="roles_usuarios">
+    <Key>
+      <PropertyRef Name="Id_RolUsuario" />
+    </Key>
+    <Property Name="Id_RolUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+    <Property Name="TipoDeRol" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tb_usuarios" Relationship="Self.FK_roles_usuarios_tb_usuarios" FromRole="roles_usuarios" ToRole="tb_usuarios" />
+  </EntityType>
+  <EntityType Name="tb_usuarios">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Contraseña" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="roles_usuarios" Relationship="Self.FK_roles_usuarios_tb_usuarios" FromRole="tb_usuarios" ToRole="roles_usuarios" />
+  </EntityType>
+  <Association Name="FK_roles_usuarios_tb_usuarios">
+    <End Role="tb_usuarios" Type="Self.tb_usuarios" Multiplicity="1" />
+    <End Role="roles_usuarios" Type="Self.roles_usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_usuarios">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="roles_usuarios">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SistemaDeVentasEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="roles_usuarios" EntityType="Self.roles_usuarios" />
+    <EntitySet Name="tb_usuarios" EntityType="Self.tb_usuarios" />
+    <AssociationSet Name="FK_roles_usuarios_tb_usuarios" Association="Self.FK_roles_usuarios_tb_usuarios">
+      <End Role="tb_usuarios" EntitySet="tb_usuarios" />
+      <End Role="roles_usuarios" EntitySet="roles_usuarios" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

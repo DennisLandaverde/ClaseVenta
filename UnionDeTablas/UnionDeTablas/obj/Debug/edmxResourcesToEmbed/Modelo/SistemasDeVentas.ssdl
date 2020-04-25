@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SistemaDeVentasModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="roles_usuarios">
+    <Key>
+      <PropertyRef Name="Id_RolUsuario" />
+    </Key>
+    <Property Name="Id_RolUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="TipoDeRol" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tb_usuarios">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Contraseña" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_roles_usuarios_tb_usuarios">
+    <End Role="tb_usuarios" Type="Self.tb_usuarios" Multiplicity="1" />
+    <End Role="roles_usuarios" Type="Self.roles_usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_usuarios">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="roles_usuarios">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SistemaDeVentasModelStoreContainer">
+    <EntitySet Name="roles_usuarios" EntityType="Self.roles_usuarios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_usuarios" EntityType="Self.tb_usuarios" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_roles_usuarios_tb_usuarios" Association="Self.FK_roles_usuarios_tb_usuarios">
+      <End Role="tb_usuarios" EntitySet="tb_usuarios" />
+      <End Role="roles_usuarios" EntitySet="roles_usuarios" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
